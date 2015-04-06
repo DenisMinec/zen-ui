@@ -1,0 +1,37 @@
+@wall-background: #39c;
+@form-background: saturate(lighten(@wall-background, 15%), 25%);
+
+body {
+  background-color: @wall-background;
+}
+
+.form {
+  margin-top: 30px;
+  width: 600px;
+  background-color: @form-background;
+
+  .left-button {
+    float: left;
+    background: url("../pic/signUp/back.png") no-repeat;
+    width: 50px;
+    height: 50px;
+    margin: 30px;
+  }
+
+  .right-button {
+    float: right;
+    background: url("../pic/signUp/info.png") no-repeat;
+    width: 50px;
+    height: 50px;
+    margin: 30px;
+  }
+  .sign-up-text {
+    color: #fff;
+    font-size: 25px;
+//    margin-top: 30px;
+    height: 30px + 50px + 30px;
+    line-height: 110px;
+    text-align: center;
+  }
+}
+
