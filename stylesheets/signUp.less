@@ -9,23 +9,29 @@ body {
   width: 600px;
   margin: 50px auto;
   .head {
-    .block {
-      float: left;
-    }
+    @image-height: 50px;
+    @image-margin: 30px;
+    @text-margins: @image-height + 2 * @image-margin;
     .button-back {
       background: url("../pic/signUp/back.png") no-repeat;
       width: 50px;
-      height: 50px;
-      margin: 30px;
+      height: @image-height;
+      margin: @image-margin;
+      float: left;
     }
     .button-info {
       background: url("../pic/signUp/info.png") no-repeat;
       width: 50px;
-      height: 50px;
-      margin: 30px;
+      height: @image-height;
+      margin: @image-margin;
+      float: right;
     }
     .head-text {
-      margin: 50px;
+      text-align: center;
+      line-height: @text-margins ;
+      margin-left: @text-margins;
+      margin-right: @text-margins;
+      height: @text-margins;
     }
   }
 }
