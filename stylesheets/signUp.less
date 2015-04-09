@@ -4,6 +4,7 @@
 body {
   background: url("../pic/signUp/sign-up-sample.png")  50% 0 no-repeat;
 }
+
 @font-face {
   font-family: 'LatoRegular';
   src: url('../fonts/Lato/Lato-Regular.ttf')format("truetype");
@@ -11,29 +12,35 @@ body {
   font-weight: normal;
 }
 
+@import 'common/cursor-default';
+
+@transparency: 0.83;
+@white-color: rgba(200, 200, 200, @transparency);
+
 .sign-up-form {
   width: 600px;
   margin: 50px auto;
-  background-color: rgba( 23, 45, 12, 0.8 );  // temporary
+  background-color: rgba( 23, 45, 12, @transparency );  // temporary
   font-family: 'LatoRegular', sans-serif;
-  color: rgba(200, 200, 200, 0.83);
+  color: @white-color;
+  border-radius: 7px;
+
   .head {
-    // TODO assign multiple arguments to one variable
-    @image-height: 50px;  // square
+    @image-size: 50px;  // square
     @image-margin-left-right: 20px;
     @image-margin-top-bottom: 30px;
-    @text-margins: @image-height + 2 * @image-margin-top-bottom;
+    @text-margins: @image-size + 2 * @image-margin-top-bottom;
     .button-back {
       background: url("../pic/signUp/back.png") no-repeat;
-      width: 50px;
-      height: @image-height;
+      width: @image-size;
+      height: @image-size;
       margin: @image-margin-top-bottom @image-margin-left-right;
       float: left;
     }
     .button-info {
       background: url("../pic/signUp/info.png") no-repeat;
-      width: 50px;
-      height: @image-height;
+      width: @image-size;
+      height: @image-size;
       margin: @image-margin-top-bottom @image-margin-left-right;
       float: right;
     }
@@ -44,29 +51,63 @@ body {
       margin-right: @text-margins;
       height: @text-margins;
       font-size: 32px;
-
-      // TODO make template
-      cursor: default;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      user-select: none;
-      -ms-user-select: none;
+      .common-cursor-default;      
     }
   }
   .photo {
-    @image-width-height: 150px;
+    @image-size: 150px;
     overflow: hidden;
     .photo {
       background: url("../pic/signUp/photo_03.png") no-repeat;
-      width: @image-width-height;
-      height: @image-width-height;
-      margin: 50px auto;
+      width: @image-size;
+      height: @image-size;
+      margin: 50px auto 20px;
       .text {
         font-size: 19px;
         text-align: center;
         line-height: 220px;
+        .common-cursor-default;
       }
     }
+  }
+  .fields {
+    padding: 0 80px;
+    input[type='text'],
+    input[type='password'],
+    input[type='email'] {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      height: 80px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 1px solid @white-color;
+      background-color: transparent;
+      font-size: 26px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .button {
+    padding: 60px 80px 0;
+    button {
+      height: 75px;
+      width: 100%;
+      color: #6D6A9D;
+      background: @white-color;
+      border-radius: 37px;
+      &,
+      &:active,
+      &:focus {
+        outline: none;
+        border: none;
+      }
+      font-size: 32px;
+    }
+
+
   }
   .scroll {
     height: 1000px;

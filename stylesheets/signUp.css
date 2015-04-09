@@ -11,9 +11,10 @@ body {
 .sign-up-form {
   width: 600px;
   margin: 50px auto;
-  background-color: rgba(23, 45, 12, 0.8);
+  background-color: rgba(23, 45, 12, 0.83);
   font-family: 'LatoRegular', sans-serif;
   color: rgba(200, 200, 200, 0.83);
+  border-radius: 7px;
 }
 .sign-up-form .head .button-back {
   background: url("../pic/signUp/back.png") no-repeat;
@@ -49,12 +50,56 @@ body {
   background: url("../pic/signUp/photo_03.png") no-repeat;
   width: 150px;
   height: 150px;
-  margin: 50px auto;
+  margin: 50px auto 20px;
 }
 .sign-up-form .photo .photo .text {
   font-size: 19px;
   text-align: center;
   line-height: 220px;
+  cursor: default;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -ms-user-select: none;
+}
+.sign-up-form .fields {
+  padding: 0 80px;
+}
+.sign-up-form .fields input[type='text'],
+.sign-up-form .fields input[type='password'],
+.sign-up-form .fields input[type='email'] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 80px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.83);
+  background-color: transparent;
+  font-size: 26px;
+}
+.sign-up-form .fields input[type='text']:focus,
+.sign-up-form .fields input[type='password']:focus,
+.sign-up-form .fields input[type='email']:focus {
+  outline: none;
+}
+.sign-up-form .button {
+  padding: 60px 80px 0;
+}
+.sign-up-form .button button {
+  height: 75px;
+  width: 100%;
+  color: #6D6A9D;
+  background: rgba(200, 200, 200, 0.83);
+  border-radius: 37px;
+  font-size: 32px;
+}
+.sign-up-form .button button,
+.sign-up-form .button button:active,
+.sign-up-form .button button:focus {
+  outline: none;
+  border: none;
 }
 .sign-up-form .scroll {
   height: 1000px;
