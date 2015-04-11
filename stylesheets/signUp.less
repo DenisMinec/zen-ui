@@ -1,10 +1,15 @@
-/* temp */
+/*
+ * temp
+ */
 @wall-background: #39334D;
 @form-background: saturate(lighten(@wall-background, 15%), 25%);
 body {
   background: url("../pic/signUp/sign-up-sample.png")  50% 0 no-repeat;
 }
 
+/*
+ * fonts
+ */
 @font-face {
   font-family: 'LatoRegular';
   src: url('../fonts/Lato/Lato-Regular.ttf')format("truetype");
@@ -12,11 +17,19 @@ body {
   font-weight: normal;
 }
 
+/*
+ * imports
+ */
 @import 'common/text-select-deny';
 @import 'common/area-without-decorations';
 
+/*
+ * variables
+ */
 @transparency: 0.83;
 @white-color: rgba(200, 200, 200, @transparency);
+@link-color: rgba(25, 200, 25, 0.83);
+@button-text-color: spin(rgba(25, 100, 25, 0.83), +90);
 
 .sign-up-form {
   width: 600px;
@@ -62,7 +75,6 @@ body {
     @image-size: 150px;
     overflow: hidden;
     .photo {
-      // background: url("../pic/signUp/photo_03.png") no-repeat;
       width: @image-size;
       height: @image-size;
       display: block;
@@ -73,12 +85,10 @@ body {
         line-height: 220px;
         .common-text-select-deny;
       }
-
-      //cursor: pointer;
     }
-
   }
   .fields {
+    position: relative;
     padding: 0 80px;
     input[type='text'],
     input[type='password'],
@@ -98,13 +108,21 @@ body {
         outline: none;
       }
     }
+    a.show {
+      position: absolute;
+      right: 80px;
+      bottom: 20px;
+      text-decoration: none;
+      font-size: 26px;
+      color: @link-color;
+    }
   }
   .button {
     padding: 60px 80px 0;
     button {
       height: 75px;
       width: 100%;
-      color: #6D6A9D;
+      color: @button-text-color;
       background: @white-color;
       border-radius: 37px;
       &,
@@ -114,12 +132,12 @@ body {
         border: none;
       }
       font-size: 32px;
+      cursor: pointer;
     }
-
-
   }
-  /* temp */
-  .scroll {
+
+  .scroll { // temp
     height: 1000px;
   }
+
 }

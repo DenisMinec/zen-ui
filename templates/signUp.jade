@@ -9,16 +9,15 @@ block content
     .photo
       img.photo(src='/pic/signUp/photo_03.png', usemap='#photo-map')
       map(name='photo-map')
-        area#add-photo(href='#', alt='add photo', shape='circle', coords='75,75,75')
+        area.add-photo(href='#', alt='add photo', shape='circle', coords='75,75,75')
     .fields
       input.first-name(type='text', placeholder='First name')
       input.last-name(type='text', placeholder='Last Name')
       input.e-mail(type='email', placeholder='Email Address')
       input.password(type='password', placeholder='Password')
-      a.show(href='')
+      a.show(href='#')
         span Show
     .button
       button.sign-up(type='submit') Sign Up
-
 
     .scroll

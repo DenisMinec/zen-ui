@@ -5,11 +5,15 @@ $('.sign-up-form .head .button-info').click(function(){
 $('.sign-up-form .head .button-back').click(function(){
   console.log('"' + this.className + '"' +' clicked');
 });
-$('#add-photo').click(function(e){
+$('.sign-up-form .photo .add-photo').click(function(e){
   e.preventDefault();
-  console.log('"' + this.id + '"' + ' clicked');
+  console.log('"' + this.className + '"' + ' clicked');
 });
 $('.sign-up-form .button button').click(function(e){
   e.preventDefault();
-  console.log('"' + this.className + '"' +' clicked');
+  console.log('"' + this.className + '"' + ' clicked');
+});
+$('.sign-up-form .fields .show').click(function(e){
+  e.preventDefault();
+  console.log('"' + this.className + '"' + ' clicked');
 });
