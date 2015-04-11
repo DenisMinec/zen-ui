@@ -2,14 +2,14 @@
  * temp
  */
 body {
-  background: url("../pic/signUp/sign-up-sample.png") 50% 0 no-repeat;
+  background: url("/pic/signUp/sign-up-sample.png") 50% 0 no-repeat;
 }
 /*
  * fonts
  */
 @font-face {
   font-family: 'LatoRegular';
-  src: url('../fonts/Lato/Lato-Regular.ttf') format("truetype");
+  src: url('/fonts/Lato/Lato-Regular.ttf') format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -29,26 +29,24 @@ area:hover {
 .sign-up-form {
   width: 600px;
   margin: 50px auto;
-  background-color: rgba(23, 45, 12, 0.83);
+  background-color: rgba(105, 100, 145, 0.15);
   font-family: 'LatoRegular', sans-serif;
   color: rgba(200, 200, 200, 0.83);
   border-radius: 7px;
 }
 .sign-up-form .head .button-back {
-  background: url("../pic/signUp/back.png") no-repeat;
+  display: block;
   width: 50px;
   height: 50px;
   margin: 30px 20px;
   float: left;
-  cursor: pointer;
 }
 .sign-up-form .head .button-info {
-  background: url("../pic/signUp/info.png") no-repeat;
+  display: block;
   width: 50px;
   height: 50px;
   margin: 30px 20px;
   float: right;
-  cursor: pointer;
 }
 .sign-up-form .head .head-text {
   text-align: center;
@@ -65,6 +63,7 @@ area:hover {
 }
 .sign-up-form .photo {
   overflow: hidden;
+  position: relative;
 }
 .sign-up-form .photo .photo {
   width: 150px;
@@ -72,10 +71,15 @@ area:hover {
   display: block;
   margin: 50px auto 20px;
 }
-.sign-up-form .photo .photo .text {
+.sign-up-form .photo .text {
   font-size: 19px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 150px;
   text-align: center;
-  line-height: 220px;
+  text-transform: uppercase;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -131,6 +135,20 @@ area:hover {
   outline: none;
   border: none;
 }
-.sign-up-form .scroll {
-  height: 1000px;
+.sign-up-form .sign-in {
+  text-align: center;
+  font-size: 26px;
+  cursor: default;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -ms-user-select: none;
+}
+.sign-up-form .sign-in a {
+  color: rgba(25, 200, 25, 0.83);
+  cursor: pointer;
+  text-decoration: none;
+}
+.sign-up-form .space {
+  height: 190px;
 }

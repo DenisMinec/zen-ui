@@ -28,13 +28,13 @@ body {
  */
 @transparency: 0.83;
 @white-color: rgba(200, 200, 200, @transparency);
-@link-color: rgba(25, 200, 25, 0.83);
-@button-text-color: spin(rgba(25, 100, 25, 0.83), +90);
+@link-color: rgba(25, 200, 25, @transparency);
+@button-text-color: spin(rgba(25, 100, 25, @transparency), +90);
 
 .sign-up-form {
   width: 600px;
   margin: 50px auto;
-  background-color: rgba( 23, 45, 12, @transparency );  // temporary
+  background-color: rgba(105, 100, 145, 0.15);
   font-family: 'LatoRegular', sans-serif;
   color: @white-color;
   border-radius: 7px;
@@ -139,9 +139,18 @@ body {
       cursor: pointer;
     }
   }
-
-  .scroll { // temp
-    height: 1000px;
+  .sign-in {
+    text-align: center;
+    font-size: 26px;
+    cursor: default;
+    a {
+      color: @link-color;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .common-text-select-deny;
   }
-
+  .space {
+    height: 190px;
+  }
 }

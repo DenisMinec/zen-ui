@@ -34,23 +34,26 @@
   </head>
   <body>
     <form class="sign-up-form">
-      <div class="head">
-        <div class="button-back"></div>
-        <div class="button-info"></div>
+      <div class="head"><img src="/pic/signUp/back.png" usemap="#button-back-map" class="button-back"><map name="button-back-map">
+          <area href="#" alt="back" shape="circle" coords="25, 25, 25" class="back"></map><img src="/pic/signUp/info.png" usemap="#button-info-map" class="button-info"><map name="button-info-map">
+          <area href="#" alt="info" shape="circle" coords="25, 25, 25" class="info"></map>
         <div class="head-text">Sign Up</div>
       </div>
-      <div class="photo"><img src="/pic/signUp/photo_03.png" usemap="#photo-map" class="photo"><map name="photo-map">
+      <div class="photo"><span class="text">Photo</span><img src="/pic/signUp/photo_03.png" usemap="#photo-map" class="photo"><map name="photo-map">
           <area href="#" alt="add photo" shape="circle" coords="75,75,75" class="add-photo"></map></div>
       <div class="fields">
-        <input type="text" placeholder="First name" class="first-name">
-        <input type="text" placeholder="Last Name" class="last-name">
-        <input type="email" placeholder="Email Address" class="e-mail">
-        <input type="password" placeholder="Password" class="password"><a href="#" class="show"><span>Show</span></a>
+        <input type="text" placeholder="First name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="first-name">
+        <input type="text" placeholder="Last Name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="last-name">
+        <input type="email" placeholder="Email Address" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="e-mail">
+        <input type="password" placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="password"><a href="#" class="show"><span>Show</span></a>
       </div>
       <div class="button">
         <button type="submit" class="sign-up">Sign Up</button>
       </div>
-      <div class="scroll"></div>
+      <div class="sign-in">
+        <p>Already a member? <span><a href="#" class="sign-in">Sign In</a></span></p>
+      </div>
+      <div class="space"></div>
     </form>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
