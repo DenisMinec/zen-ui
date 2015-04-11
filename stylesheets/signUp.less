@@ -1,4 +1,4 @@
-/* temporary */
+/* temp */
 @wall-background: #39334D;
 @form-background: saturate(lighten(@wall-background, 15%), 25%);
 body {
@@ -12,7 +12,8 @@ body {
   font-weight: normal;
 }
 
-@import 'common/cursor-default';
+@import 'common/text-select-deny';
+@import 'common/area-without-decorations';
 
 @transparency: 0.83;
 @white-color: rgba(200, 200, 200, @transparency);
@@ -36,6 +37,7 @@ body {
       height: @image-size;
       margin: @image-margin-top-bottom @image-margin-left-right;
       float: left;
+      cursor: pointer;
     }
     .button-info {
       background: url("../pic/signUp/info.png") no-repeat;
@@ -43,6 +45,7 @@ body {
       height: @image-size;
       margin: @image-margin-top-bottom @image-margin-left-right;
       float: right;
+      cursor: pointer;
     }
     .head-text {
       text-align: center;
@@ -51,24 +54,29 @@ body {
       margin-right: @text-margins;
       height: @text-margins;
       font-size: 32px;
-      .common-cursor-default;      
+      .common-text-select-deny;
+      cursor: default;
     }
   }
   .photo {
     @image-size: 150px;
     overflow: hidden;
     .photo {
-      background: url("../pic/signUp/photo_03.png") no-repeat;
+      // background: url("../pic/signUp/photo_03.png") no-repeat;
       width: @image-size;
       height: @image-size;
+      display: block;
       margin: 50px auto 20px;
       .text {
         font-size: 19px;
         text-align: center;
         line-height: 220px;
-        .common-cursor-default;
+        .common-text-select-deny;
       }
+
+      //cursor: pointer;
     }
+
   }
   .fields {
     padding: 0 80px;
@@ -85,6 +93,7 @@ body {
       border-bottom: 1px solid @white-color;
       background-color: transparent;
       font-size: 26px;
+      color: inherit;
       &:focus {
         outline: none;
       }
@@ -109,6 +118,7 @@ body {
 
 
   }
+  /* temp */
   .scroll {
     height: 1000px;
   }
