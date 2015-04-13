@@ -9,6 +9,10 @@ module.exports = function (grunt) {
         files: ['templates/**/*.jade'],
         tasks: ['jade']
       },
+      test_js: {
+        files: ['scripts/test.js'],
+        tasks: []
+      },
       options: {
         livereload: true
       }

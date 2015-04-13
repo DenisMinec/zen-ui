@@ -1,29 +1,159 @@
+/*
+ * temp
+ */
 body {
-  background-color: #3399cc;
+  background: url("/pic/signUp/background.png") 50% 0 no-repeat;
 }
-.form {
-  margin-top: 30px;
+/*
+ * fonts
+ */
+@font-face {
+  font-family: 'LatoRegular';
+  src: url('/fonts/Lato/Lato-Regular.ttf') format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/*
+ * imports
+ */
+area,
+area:focus,
+area:hover {
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+/*
+ * variables
+ */
+.sign-up-form {
   width: 600px;
-  background-color: #5abff2;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: url('/pic/signUp/lines_05.png');
+  font-family: 'LatoRegular', sans-serif;
+  color: rgba(255, 255, 255, 0.93);
+  border-radius: 7px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
-.form .left-button {
+.sign-up-form .head .button-back {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 30px 20px;
   float: left;
-  background: url("../pic/signUp/back.png") no-repeat;
+}
+.sign-up-form .head .button-info {
+  display: block;
   width: 50px;
   height: 50px;
-  margin: 30px;
-}
-.form .right-button {
+  margin: 30px 20px;
   float: right;
-  background: url("../pic/signUp/info.png") no-repeat;
-  width: 50px;
-  height: 50px;
-  margin: 30px;
 }
-.form .sign-up-text {
-  color: #fff;
-  font-size: 25px;
-  height: 110px;
-  line-height: 110px;
+.sign-up-form .head .head-text {
   text-align: center;
+  line-height: 110px;
+  margin-left: 110px;
+  margin-right: 110px;
+  height: 110px;
+  font-size: 32px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.sign-up-form .photo {
+  overflow: hidden;
+  position: relative;
+}
+.sign-up-form .photo .photo {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 50px auto 20px;
+}
+.sign-up-form .photo .text {
+  font-size: 19px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 150px;
+  text-align: center;
+  text-transform: uppercase;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.sign-up-form .fields {
+  position: relative;
+  padding: 0 80px;
+}
+.sign-up-form .fields input[type='text'],
+.sign-up-form .fields input[type='password'],
+.sign-up-form .fields input[type='email'] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 80px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.93);
+  background-color: transparent;
+  font-size: 26px;
+  color: inherit;
+}
+.sign-up-form .fields input[type='text']:focus,
+.sign-up-form .fields input[type='password']:focus,
+.sign-up-form .fields input[type='email']:focus {
+  outline: none;
+}
+.sign-up-form .fields ::-webkit-input-placeholder {
+  color: #cccccc;
+}
+.sign-up-form .fields a.show {
+  position: absolute;
+  right: 80px;
+  bottom: 20px;
+  text-decoration: none;
+  font-size: 26px;
+  color: rgba(25, 200, 25, 0.93);
+}
+.sign-up-form .button {
+  padding: 60px 80px 0;
+}
+.sign-up-form .button button {
+  height: 75px;
+  width: 100%;
+  color: rgba(25, 62, 100, 0.93);
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 37px;
+  font-size: 32px;
+  cursor: pointer;
+}
+.sign-up-form .button button,
+.sign-up-form .button button:active,
+.sign-up-form .button button:focus {
+  outline: none;
+  border: none;
+}
+.sign-up-form .sign-in {
+  text-align: center;
+  font-size: 26px;
+  cursor: default;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.sign-up-form .sign-in a {
+  color: rgba(25, 200, 25, 0.93);
+  cursor: pointer;
+  text-decoration: none;
+}
+.sign-up-form .space {
+  height: 190px;
 }

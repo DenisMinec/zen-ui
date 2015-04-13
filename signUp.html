@@ -5,9 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags-->
+    <meta name="description" content="">
     <title>Sign Up</title>
-    <!-- Bootstrap-->
-    <link href="lib/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- Bootstrap
+    link(rel='stylesheet', href='lib/bootstrap-3.3.4-dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='lib/bootstrap-3.3.4-dist/css/bootstrap.css')
+    
+    -->
+    <!-- Font awesome
+    link(rel='stylesheet', href='lib/font-awesome-4.3.0/css/font-awesome.min.css')
+    
+    -->
+    <!-- Fancy box
+    link(rel='stylesheet', href='lib/fancyapps-fancyBox-18d1712/source/jquery.fancybox.css')
+    
+    -->
+    <!-- owl carousel
+    link(rel='stylesheet', href='lib/owl-carousel/owl-carousel/owl.carousel.css')
+    
+    -->
     <!-- Custom styles-->
     <link rel="stylesheet" href="stylesheets/signUp.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
@@ -16,17 +33,36 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
-    <div class="container form">
-      <div class="row">
-        <div class="left-button"></div>
-        <div class="right-button"></div>
-        <div class="sign-up-text">Sign Up</div>
+    <form class="sign-up-form">
+      <div class="head"><img src="/pic/signUp/back.png" usemap="#button-back-map" class="button-back"><map name="button-back-map">
+          <area href="#" alt="back" shape="circle" coords="25, 25, 25" class="back"></map><img src="/pic/signUp/info.png" usemap="#button-info-map" class="button-info"><map name="button-info-map">
+          <area href="#" alt="info" shape="circle" coords="25, 25, 25" class="info"></map>
+        <div class="head-text">Sign Up</div>
       </div>
-    </div>
+      <div class="photo"><span class="text">Photo</span><img src="/pic/signUp/photo_03.png" usemap="#photo-map" class="photo"><map name="photo-map">
+          <area href="#" alt="add photo" shape="circle" coords="75,75,75" class="add-photo"></map></div>
+      <div class="fields">
+        <input type="text" placeholder="First name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="first-name">
+        <input type="text" placeholder="Last Name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="last-name">
+        <input type="email" placeholder="Email Address" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="e-mail">
+        <input type="password" placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="password"><a href="#" class="show"><span>Show</span></a>
+      </div>
+      <div class="button">
+        <button type="submit" class="sign-up">Sign Up</button>
+      </div>
+      <div class="sign-in">
+        <p>Already a member? <span><a href="#" class="sign-in">Sign In</a></span></p>
+      </div>
+      <div class="space"></div>
+    </form>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
     <script src="lib/jquery-1.11.2.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed-->
-    <script src="lib/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed
+    script(src='lib/bootstrap-3.3.4-dist/js/bootstrap.min.js')
+    
+    -->
+    <!-- Custom-->
+    <script src="scripts/test.js"></script>
   </body>
 </html>

@@ -1,8 +1,30 @@
 extends common/layout
 
 block content
-  .container.form
-    .row
-      .left-button
-      .right-button
-      .sign-up-text Sign Up
+  form.sign-up-form
+    .head
+      img.button-back(src='/pic/signUp/back.png', usemap='#button-back-map')
+      map(name='button-back-map')
+        area.back(href='#', alt='back', shape='circle', coords='25, 25, 25')
+      img.button-info(src='/pic/signUp/info.png', usemap='#button-info-map')
+      map(name='button-info-map')
+        area.info(href='#', alt='info', shape='circle', coords='25, 25, 25')
+      .head-text Sign Up
+    .photo
+      span.text Photo
+      img.photo(src='/pic/signUp/photo_03.png', usemap='#photo-map')
+      map(name='photo-map')
+        area.add-photo(href='#', alt='add photo', shape='circle', coords='75,75,75')
+    .fields
+      input.first-name(type='text', placeholder='First name', autocomplete='off', autocorrect='off', autocapitalize='off', spellcheck='false')
+      input.last-name(type='text', placeholder='Last Name', autocomplete='off', autocorrect='off', autocapitalize='off', spellcheck='false')
+      input.e-mail(type='email', placeholder='Email Address', autocomplete='off', autocorrect='off', autocapitalize='off', spellcheck='false')
+      input.password(type='password', placeholder='Password', autocomplete='off', autocorrect='off', autocapitalize='off', spellcheck='false')
+      a.show(href='#')
+        span Show
+    .button
+      button.sign-up(type='submit') Sign Up
+    .sign-in
+      p='Already a member? '
+        span: a.sign-in(href='#') Sign In
+    .space
