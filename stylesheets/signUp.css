@@ -2,7 +2,7 @@
  * temp
  */
 body {
-  background: url("/pic/signUp/sign-up-sample.png") 50% 0 no-repeat;
+  background: url("/pic/signUp/background.png") 50% 0 no-repeat;
 }
 /*
  * fonts
@@ -20,7 +20,7 @@ area,
 area:focus,
 area:hover {
   text-decoration: none;
-  border: 0;
+  border: none;
   outline: none;
 }
 /*
@@ -29,10 +29,12 @@ area:hover {
 .sign-up-form {
   width: 600px;
   margin: 50px auto;
-  background-color: rgba(105, 100, 145, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: url('/pic/signUp/lines_05.png');
   font-family: 'LatoRegular', sans-serif;
-  color: rgba(200, 200, 200, 0.83);
+  color: rgba(255, 255, 255, 0.93);
   border-radius: 7px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 .sign-up-form .head .button-back {
   display: block;
@@ -57,8 +59,8 @@ area:hover {
   font-size: 32px;
   -moz-user-select: none;
   -webkit-user-select: none;
-  user-select: none;
   -ms-user-select: none;
+  user-select: none;
   cursor: default;
 }
 .sign-up-form .photo {
@@ -82,8 +84,8 @@ area:hover {
   text-transform: uppercase;
   -moz-user-select: none;
   -webkit-user-select: none;
-  user-select: none;
   -ms-user-select: none;
+  user-select: none;
 }
 .sign-up-form .fields {
   position: relative;
@@ -99,7 +101,7 @@ area:hover {
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 1px solid rgba(200, 200, 200, 0.83);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.93);
   background-color: transparent;
   font-size: 26px;
   color: inherit;
@@ -109,13 +111,16 @@ area:hover {
 .sign-up-form .fields input[type='email']:focus {
   outline: none;
 }
+.sign-up-form .fields ::-webkit-input-placeholder {
+  color: #cccccc;
+}
 .sign-up-form .fields a.show {
   position: absolute;
   right: 80px;
   bottom: 20px;
   text-decoration: none;
   font-size: 26px;
-  color: rgba(25, 200, 25, 0.83);
+  color: rgba(25, 200, 25, 0.93);
 }
 .sign-up-form .button {
   padding: 60px 80px 0;
@@ -123,8 +128,8 @@ area:hover {
 .sign-up-form .button button {
   height: 75px;
   width: 100%;
-  color: rgba(25, 62, 100, 0.83);
-  background: rgba(200, 200, 200, 0.83);
+  color: rgba(25, 62, 100, 0.93);
+  background: rgba(255, 255, 255, 0.93);
   border-radius: 37px;
   font-size: 32px;
   cursor: pointer;
@@ -141,11 +146,11 @@ area:hover {
   cursor: default;
   -moz-user-select: none;
   -webkit-user-select: none;
-  user-select: none;
   -ms-user-select: none;
+  user-select: none;
 }
 .sign-up-form .sign-in a {
-  color: rgba(25, 200, 25, 0.83);
+  color: rgba(25, 200, 25, 0.93);
   cursor: pointer;
   text-decoration: none;
 }

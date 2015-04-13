@@ -4,7 +4,8 @@
 @wall-background: #39334D;
 @form-background: saturate(lighten(@wall-background, 15%), 25%);
 body {
-  background: url("/pic/signUp/sign-up-sample.png")  50% 0 no-repeat;
+  //background: url("/pic/signUp/sign-up-sample.png")  50% 0 no-repeat;
+  background: url("/pic/signUp/background.png")  50% 0 no-repeat;
 }
 
 /*
@@ -22,22 +23,27 @@ body {
  */
 @import 'common/text-select-deny';
 @import 'common/area-without-decorations';
+// @import 'common/input-fields-color';
 
 /*
  * variables
  */
-@transparency: 0.83;
-@white-color: rgba(200, 200, 200, @transparency);
+@transparency: 0.93;
+@white-color: rgba(255, 255, 255, @transparency);
 @link-color: rgba(25, 200, 25, @transparency);
 @button-text-color: spin(rgba(25, 100, 25, @transparency), +90);
+
+
 
 .sign-up-form {
   width: 600px;
   margin: 50px auto;
-  background-color: rgba(105, 100, 145, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: url('/pic/signUp/lines_05.png');
   font-family: 'LatoRegular', sans-serif;
   color: @white-color;
   border-radius: 7px;
+  box-shadow: 0 0 7px rgba(0,0,0,0.5);
 
   .head {
     @image-size: 50px;  // square
@@ -91,6 +97,7 @@ body {
       .common-text-select-deny;
     }
   }
+
   .fields {
     position: relative;
     padding: 0 80px;
@@ -111,7 +118,9 @@ body {
       &:focus {
         outline: none;
       }
+
     }
+    ::-webkit-input-placeholder {color: #ccc}
     a.show {
       position: absolute;
       right: 80px;
@@ -120,6 +129,7 @@ body {
       font-size: 26px;
       color: @link-color;
     }
+
   }
   .button {
     padding: 60px 80px 0;
